@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pointcept"
+version = "0.1.0"
+description = "Point Cloud Perception Platform"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "h5py",
+    "pyyaml",
+    "sharedarray",
+    "tensorboard",
+    "tensorboardx",
+    "wandb",
+    "yapf",
+    "addict",
+    "einops",
+    "scipy",
+    "plyfile",
+    "termcolor",
+    "timm",
+    "torch-geometric",
+    "spconv-cu124",
+    "ftfy",
+    "regex",
+    "tqdm",
+    "clip @ git+https://github.com/openai/CLIP.git"
+]
+
+[tool.setuptools.packages.find]
+# This tells python that the 'pointcept' folder is the package
+where = ["."]
+include = ["pointcept*"]

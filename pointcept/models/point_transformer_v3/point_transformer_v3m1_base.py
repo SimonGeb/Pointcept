@@ -4,7 +4,10 @@ Point Transformer - V3 Mode1
 Author: Xiaoyang Wu (xiaoyang.wu.cs@gmail.com)
 Please cite our work if the code is helpful to you.
 """
-
+import sys
+import os
+sys.path.append(os.path.abspath('/Code/free_road_estimation/external/Pointcept'))
+sys.path.append(os.path.abspath('/Code/free_road_estimation/'))
 from functools import partial
 from addict import Dict
 import math
@@ -712,3 +715,8 @@ class PointTransformerV3(PointModule):
         #         reduce="mean",
         #     )
         return point
+
+if __name__ == "__main__":
+
+    model = PointTransformerV3()
+    print(model)
